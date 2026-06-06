@@ -45,7 +45,7 @@ function renderProductDetail() {
     const product = products.find(p => p.id === productId);
 
     if (product) {
-        document.title = `${product.name} | AURA Menswear`;
+        document.title = `${product.name} | AURA 頂級男裝`;
         container.innerHTML = `
             <div class="detail-img-wrapper animate-fade-up">
                 <img src="${product.image}" alt="${product.name}" class="detail-img">
@@ -55,11 +55,11 @@ function renderProductDetail() {
                 <h1>${product.name}</h1>
                 <div class="detail-price">$${product.price}</div>
                 <p class="detail-desc">${product.description}</p>
-                <button class="btn" onclick="alert('Item added to cart!')">Add to Cart</button>
+                <button class="btn" onclick="alert('已加入購物車！')">加入購物車</button>
             </div>
         `;
     } else {
-        container.innerHTML = `<h1>Product not found</h1><p>The product you are looking for does not exist.</p><a href="index.html" class="btn" style="margin-top: 20px;">Return Home</a>`;
+        container.innerHTML = `<h1>找不到商品</h1><p>您尋找的商品不存在。</p><a href="index.html" class="btn" style="margin-top: 20px;">返回首頁</a>`;
     }
 }
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Message sent successfully! We will get back to you soon.');
+            alert('訊息發送成功！我們將盡快與您聯絡。');
             form.reset();
         });
     }
